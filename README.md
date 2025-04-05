@@ -102,13 +102,19 @@ ETL-Ocaml/
 Para o desenvolvimento e execução do projeto, foi utilizado:
 - **OCaml** 
     - Versão: 5.2.1
+
     ![Ocaml](etl/assets/ocaml_version.png)
+
 - **Dune** (para build e gerenciamento de dependências)
     - Versão: 3.18.0
+
     ![Dune](etl/assets/dune_version.png)
+
 - **Opam** (gerenciador de pacotes OCaml)
     - Versão: 2.3.0
+
     ![Opam](etl/assets/opam_version.png)
+    
 - **Bibliotecas**:  
   1. `csv`  (para leitura de CSV)
   2. `ocurl` (para requisições HTTP bloqueantes)  
@@ -146,7 +152,7 @@ Depois de compilar, rode:
 dune exec etl.main -- [status] [origin] [orders_source] [items_source]
 ```
 - **status**: `pending`, `complete` ou `cancelled`.
-- **origin**: `O` (online) ou `P` (paraphysical).
+- **origin**: `O` (online) ou `P` (physical).
 - **orders_source**: URL ou caminho local para `order.csv` (opcional).
 - **items_source**: URL ou caminho local para `order_item.csv` (opcional).
 Obs.: Se omitir `orders_source` e `items_source`, usa por padrão `data/raw/order.csv` e `data/raw/order_item.csv`.
