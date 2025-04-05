@@ -102,13 +102,13 @@ ETL-Ocaml/
 Para o desenvolvimento e execução do projeto, foi utilizado:
 - **OCaml** 
     - Versão: 5.2.1
-    ![Ocaml](assets/ocaml_version.png)
+    ![Ocaml](etl/assets/ocaml_version.png)
 - **Dune** (para build e gerenciamento de dependências)
     - Versão: 3.18.0
-    ![Dune](assets/dune_version.png)
+    ![Dune](etl/assets/dune_version.png)
 - **Opam** (gerenciador de pacotes OCaml)
     - Versão: 2.3.0
-    ![Opam](assets/opam_version.png)
+    ![Opam](etl/assets/opam_version.png)
 - **Bibliotecas**:  
   1. `csv`  (para leitura de CSV)
   2. `ocurl` (para requisições HTTP bloqueantes)  
@@ -166,7 +166,7 @@ Obs.: Se omitir `orders_source` e `items_source`, usa por padrão `data/raw/orde
 
 3. Via HTTP:
     ```bash
-    dune exec etl -- complete O https://raw.githubusercontent.com/thomaschiari/ocaml-etl/refs/heads/main/etl_project/data/raw/order.csv https://raw.githubusercontent.com/thomaschiari/ocaml-etl/refs/heads/main/etl_project/data/raw/order_item.csv
+    dune exec etl -- complete O https://raw.githubusercontent.com/LuccaHiratsuca/ETL-Ocaml/refs/heads/main/etl/data/raw/order.csv?token=GHSAT0AAAAAAC7YKUZOVOCZKNHPG6CSBP4YZ7QYNNQ https://raw.githubusercontent.com/LuccaHiratsuca/ETL-Ocaml/refs/heads/main/etl/data/raw/order_item.csv?token=GHSAT0AAAAAAC7YKUZOCOI3G5VBPAFLXKRAZ7QYOKQ
     ```
     Se `orders_source` ou `items_source` começa com `http://` ou `https://`, a leitura usará read_csv_http_ocurl
 
