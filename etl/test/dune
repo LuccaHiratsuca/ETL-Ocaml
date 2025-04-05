@@ -1,0 +1,4 @@
+(test
+ (name test_domain)
+ (libraries etl ounit2)
+ (modules test_domain))
